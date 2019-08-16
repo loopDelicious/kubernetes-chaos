@@ -40,3 +40,13 @@ In the Postman app, [import the template](https://learning.getpostman.com/docs/p
 1. Stop the attack (only if the performance of the node is not as expected)
 
 [screenshots of postman and grafana]
+
+## A few gotchas
+
+#### Managing Users or IAM Roles for your AWS EKS cluster
+
+If you're using [`aws-iam-authenticator`](https://github.com/kubernetes-sigs/aws-iam-authenticator#specifying-credentials--using-aws-profiles) to manage your clusters from the CLI and have an MFA authentication requirement, you may need to [get a session token](https://docs.aws.amazon.com/cli/latest/reference/sts/get-session-token.html), and update a separate profile in your `/.aws/credentials`.
+
+#### Configuring your EKS cluster in Grafana
+
+Configuring your Kubernetes cluster in Grafana is not super well-documented, so [these notes](https://github.com/grafana/kubernetes-app/issues/35#issuecomment-407878758) might help. If you're using the kubernetes-app plugin, it requires TLS certs, and EKS doesn't support TLS. You can try using a different managed service like GKE (as in [this tutorial](https://medium.com/htc-research-engineering-blog/monitoring-kubernetes-clusters-with-grafana-e2a413febefd))), create your own Grafana dashboard, or use an ingress controller to manage external access to the apps running inside the cluster like [`ingress-nginx`](https://github.com/kubernetes/ingress-nginx) in conjunction with a service that automatically creates and manages TLS certs in Kubernetes like [`cert-manager`](https://github.com/helm/charts/tree/master/stable/cert-manager) (as in [this tutorial](https://itnext.io/automated-tls-with-cert-manager-and-letsencrypt-for-kubernetes-7daaa5e0cae4)).
