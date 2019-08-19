@@ -1,8 +1,8 @@
-# Building resilient APIs with chaos engineering
+# Building resilient APIs with chaos engineering 🔥
 
 The example that follows supports an article published on _Better Practices_. Learn more about [Building resilient APIs with chaos engineering](https://medium.com/@joycelin.codes/chaos-d3ef238ec328).
 
-## Getting Started
+## Get Started
 
 This sample app is forked from Google's [Hipster Shop: Cloud-Native Microservices Demo Application](https://github.com/GoogleCloudPlatform/microservices-demo) - a web-based e-commerce app called **“Hipster Shop”** where users can browse items, add them to the cart, and purchase them. The application works on any Kubernetes cluster (such as a local one).
 
@@ -27,7 +27,9 @@ Proceed with [Monitoring Kubernetes clusters with Grafana](https://medium.com/ht
 
 - Step 0 - Create a GKE cluster (skip)
 - Step 1 - Lots and lots and lots of yaml configuration
-- Step 2 - Configure your cluster settings on Grafana (see gotchas below)
+- Step 2 - Configure your cluster settings on Grafana (skip)
+
+Instead of configuring your cluster settings on Grafana, you can simply import an existing dashboard if your monitoring tools are running on your cluster. See the gotchas below.
 
 ![[grafana dashboard 3131](https://i.imgur.com/a0tDoJT.png)](https://i.imgur.com/a0tDoJT.png)
 
