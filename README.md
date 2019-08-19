@@ -35,7 +35,9 @@ Instead of configuring your cluster settings on Grafana, you can simply import a
 
 #### Use Postman to shut down a single container via the Gremlin API
 
-In the Postman app, [import the template](https://learning.getpostman.com/docs/postman/launching_postman/newbutton/#templates) called `Chaos engineering` that includes the `chaosEngineering` environment, and then look for the folder called `Shut down a container`. You will need [to update the Postman environment](https://learning.getpostman.com/docs/postman/environments_and_globals/manage_environments/#editing-an-active-environment) with your `gremlin_api_key` and `your-deployed-app-url`. Read the [Chaos engineering](https://documenter.getpostman.com/view/1559645/SVfH1sqD) collection documentation for step-by-step instructions.
+In the Postman app, [import the template](https://learning.getpostman.com/docs/postman/launching_postman/newbutton/#templates) called `Chaos engineering` that includes the `chaosEngineering` environment, and then look for the folder called `Shut down a container`. You will need [to update the Postman environment](https://learning.getpostman.com/docs/postman/environments_and_globals/manage_environments/#editing-an-active-environment) with your `gremlin_api_key` and `your_deployed_app_url`. Read the [Chaos engineering](https://documenter.getpostman.com/view/1559645/SVfH1sqD) collection documentation for step-by-step instructions.
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/b07acbdc8e6f2d2b59f8#?env%5BchaosEngineering%5D=W3sia2V5IjoibW9ja191cmwiLCJ2YWx1ZSI6Imh0dHBzOi8vYmQwMTVmMWUtNjQwMS00MzdkLTliYjYtYTk4NDg4MmVlMzNlLm1vY2sucHN0bW4uaW8iLCJlbmFibGVkIjp0cnVlfSx7ImtleSI6ImdyZW1saW5fYXBpIiwidmFsdWUiOiJodHRwczovL2FwaS5ncmVtbGluLmNvbS92MSIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiZ3JlbWxpbl9hcGlfa2V5IiwidmFsdWUiOiJ5b3VyLWdyZW1saW4tYXBpLWtleSIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoieW91cl9kZXBsb3llZF9hcHBfVVJMIiwidmFsdWUiOiJ5b3VyLWRlcGxveWVkLWFwcC11cmwiLCJlbmFibGVkIjp0cnVlfV0=)
 
 1. Get a list of all active containers
 1. Create a shutdown attack on a specific container
