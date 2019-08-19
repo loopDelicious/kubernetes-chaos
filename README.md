@@ -1,10 +1,10 @@
 # Building resilient APIs with chaos engineering
 
-The example that follows supports an article published on _[Better Practices](https://medium.com/better-practices)_. Learn more about chaos engineering [here](https://medium.com/@joycelin.codes/chaos-d3ef238ec328).
-
-This sample app is forked from Google's [Hipster Shop: Cloud-Native Microservices Demo Application](https://github.com/GoogleCloudPlatform/microservices-demo) - a web-based e-commerce app called **“Hipster Shop”** where users can browse items, add them to the cart, and purchase them. The application works on any Kubernetes cluster (such as a local one).
+The example that follows supports an article published on _Better Practices_. Learn more about [Building resilient APIs with chaos engineering](https://medium.com/@joycelin.codes/chaos-d3ef238ec328).
 
 ## Getting Started
+
+This sample app is forked from Google's [Hipster Shop: Cloud-Native Microservices Demo Application](https://github.com/GoogleCloudPlatform/microservices-demo) - a web-based e-commerce app called **“Hipster Shop”** where users can browse items, add them to the cart, and purchase them. The application works on any Kubernetes cluster (such as a local one).
 
 #### Set up Gremlin and create a Kubernetes cluster on EKS
 
@@ -29,7 +29,7 @@ Proceed with [Monitoring Kubernetes clusters with Grafana](https://medium.com/ht
 - Step 1 - Lots and lots and lots of yaml configuration
 - Step 2 - Configure your cluster settings on Grafana (see gotchas below)
 
-![grafana dashboard 3131](https://i.imgur.com/a0tDoJT.png)](https://i.imgur.com/a0tDoJT.png)
+![[grafana dashboard 3131](https://i.imgur.com/a0tDoJT.png)](https://i.imgur.com/a0tDoJT.png)
 
 #### Use Postman to shut down a single container via the Gremlin API
 
@@ -39,9 +39,9 @@ In the Postman app, [import the template](https://learning.getpostman.com/docs/p
 1. Create a shutdown attack on a specific container
 1. Verify app health
 1. Stop the attack (if you need to)
-   ![[collection runner](https://i.imgur.com/UPPy3bQ.png)](https://i.imgur.com/UPPy3bQ.png)
    ![[attack in postman](https://i.imgur.com/7hrGhIg.png)](https://i.imgur.com/7hrGhIg.png)
    ![[500 error](https://i.imgur.com/ulRVM69.png)](https://i.imgur.com/ulRVM69.png)
+   ![[collection runner](https://i.imgur.com/UPPy3bQ.png)](https://i.imgur.com/UPPy3bQ.png)
 
 ## Some gotchas
 
@@ -60,4 +60,4 @@ You can use an ingress controller to manage external access to the apps running 
 Additionally, you can use an existing Grafana dashboard like [this one](https://grafana.com/grafana/dashboards/3131) for an overview of all nodes in a Kubernetes Cluster. There are other options as well.
 
 - Configuring your cluster in Grafana using the `kubernetes-app` plugin is not super well-documented, so [these notes](https://github.com/grafana/kubernetes-app/issues/35#issuecomment-407878758) might help.
-- TLS certs are required for authentication using the plugin, and EKS doesn't support TLS. You can create your own Grafana dashboard or try using a different managed service like GKE (as in [this tutorial](https://medium.com/htc-research-engineering-blog/monitoring-kubernetes-clusters-with-grafana-e2a413febefd)).
+- TLS certs are required for authentication using the plugin, and EKS doesn't support TLS. You can try using a different managed service like GKE (as in [this tutorial](https://medium.com/htc-research-engineering-blog/monitoring-kubernetes-clusters-with-grafana-e2a413febefd)), or many more steps will be required (if you're using the plugin).
