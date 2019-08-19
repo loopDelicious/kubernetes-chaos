@@ -33,7 +33,7 @@ Proceed with [Monitoring Kubernetes clusters with Grafana](https://medium.com/ht
 
 #### Use Postman to shut down a single container via the Gremlin API
 
-In the Postman app, [import the template](https://learning.getpostman.com/docs/postman/launching_postman/newbutton/#templates) called `Chaos engineering` that includes the `chaosEngineering` environment, and then look for the folder called `Shut down a container`. Read the [Chaos engineering](insert link) collection documentation for step-by-step instructions.
+In the Postman app, [import the template](https://learning.getpostman.com/docs/postman/launching_postman/newbutton/#templates) called `Chaos engineering` that includes the `chaosEngineering` environment, and then look for the folder called `Shut down a container`. You will need [to update the Postman environment](https://learning.getpostman.com/docs/postman/environments_and_globals/manage_environments/#editing-an-active-environment) with your `gremlin_api_key` and `your-deployed-app-url`. Read the [Chaos engineering](https://documenter.getpostman.com/view/1559645/SVfH1sqD) collection documentation for step-by-step instructions.
 
 1. Get a list of all active containers
 1. Create a shutdown attack on a specific container
@@ -43,7 +43,7 @@ In the Postman app, [import the template](https://learning.getpostman.com/docs/p
    ![[500 error](https://i.imgur.com/ulRVM69.png)](https://i.imgur.com/ulRVM69.png)
    ![[collection runner](https://i.imgur.com/UPPy3bQ.png)](https://i.imgur.com/UPPy3bQ.png)
 
-## Some gotchas
+## A few gotchas
 
 #### Managing Users or IAM Roles for your AWS EKS cluster
 
